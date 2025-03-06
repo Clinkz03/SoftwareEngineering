@@ -4,8 +4,6 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 
-
-
 def category(request, boo):
     # Get the category from the url
     try:

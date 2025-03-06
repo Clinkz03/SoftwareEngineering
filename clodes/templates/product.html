@@ -2,31 +2,40 @@
 {% block content %}
 
 <!-- Header-->
-<header class="bg-dark py-5">
+<header style="background-color: #fff3d9; font-family: 'Open Sans', sans-serif;" class="py-5">
             <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
+                <div class="text-center text-dark">
                     <h1 class="display-4 fw-bolder">PRODUCT</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">WELCOME PRE</p>
+                    <p class="lead fw-normal text-dark-50 mb-0">WELCOME PRE</p>
                 </div>
             </div>
 </header>
 <br/>
-<div class="container">
-   <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
+
+<div class="container px-4 px-lg-5 mt-5">
+ <div class="card mb-3" style="max-width: 540px;">
+
+
+   <div class="row g-0">
     <div class="col-md-4">
       <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
+     </div>
+     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">{{ product.name }}</h5>
         <p class="card-text">{{ product.description }}</p>
-
+        <h5 class="card-title">{{ product.price }}</h5>
+          ID: {{ product.id }}
         <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+          <button type="button" value="{{ product.id }}" class="btn btn-secondary" id="add-cart">Add To Cart</button>
       </div>
     </div>
   </div>
+ </div>
 </div>
-</div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
 
 {% endblock %}
