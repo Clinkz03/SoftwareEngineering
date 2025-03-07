@@ -1,3 +1,5 @@
+from django.conf.urls.static import static
+from django.conf import settings
 from django.urls import path
 from . import views
 
@@ -10,3 +12,5 @@ urlpatterns = [
     path('product/<int:pk>', views.product, name='product'),
     path('category/<str:boo>', views.category, name='category'),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL , document_root = settings.STATIC_ROOT)
