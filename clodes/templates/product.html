@@ -6,7 +6,6 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-dark">
                     <h1 class="display-4 fw-bolder">PRODUCT</h1>
-                    <p class="lead fw-normal text-dark-50 mb-0">WELCOME PRE</p>
                 </div>
             </div>
 </header>
@@ -24,6 +23,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ product.name }}</h5>
         <p class="card-text">{{ product.description }}</p>
+        <h5 class="card-title">{{ product.size }}</h5>
         <h5 class="card-title">£{{ product.price }}</h5>
           ID: {{ product.id }}
         <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
