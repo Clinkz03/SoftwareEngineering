@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
-from .models import Category, Customer, Product, Order
+from .models import Category, Customer, Product
 from django.contrib.auth.models import User
 import time
 
@@ -11,7 +11,7 @@ class FunctionalTests(TestCase):
 
         # Create a customer
         self.customer = Customer.objects.create(
-            first_name='John', last_name='Doe', phone='heyser', password='janjan12345'
+            first_name='Denver', last_name='Saw', phone='12345678901', password='janjan12345'
         )
         # Create products
         self.product1 = Product.objects.create(
